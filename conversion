@@ -1,0 +1,12 @@
+
+  
+ def itos(num):
+  string = print("'" + str(num) + "'")
+  return string
+ def stof(string):
+    float = print(string)
+    return float
+def ftos(float):
+  string = print("'" + str(float) + "'")
+  return string
+ 
