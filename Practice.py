@@ -1,4 +1,4 @@
-# code to print version of python
+'''# code to print version of python
 from math import sqrt
 import sys
 print("Python Version: ",sys.version)
@@ -63,3 +63,47 @@ print(diff.days)
 #length of string
 string = input("Enter name:")
 print("Length of string is ",len(string))
+3
+
+def getdate(a,b):
+    import datetime
+    f_day = datetime.date(a,d)
+    l_day = datetime.date(b)
+    date_diff = f_day - l_day
+    return print(date_diff.days+'days')
+getdate("201")'''
+
+def factorial(n):
+    total = n
+    while n > 1:
+        total = total *(n - 1)
+        n-=1
+    return total
+
+number = int(input("Enter your number:"))
+print(factorial(number))
+
+#Write a Python function to check whether a number falls in a given range.
+def check_within_range(a):
+    if a in range(0,10):
+        return print("Your number is within range")
+    else:
+        return print("Mumuuuuu")
+    
+
+number_1 = int(input("Enter your number:"))
+print(check_within_range(number_1))
+
+#Calculate the number of upper / lower case letters in a string
+def alpha_counter(a):
+    upper = 0
+    lower = 0
+    for i in a:
+        if a.isupper():
+            upper +=1
+        elif a.islower():
+            lower += 1
+        return upper,lower
+
+print(alpha_counter('The quick Brown Fox'))
+
