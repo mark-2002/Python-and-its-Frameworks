@@ -71,7 +71,7 @@ def getdate(a,b):
     l_day = datetime.date(b)
     date_diff = f_day - l_day
     return print(date_diff.days+'days')
-getdate("201")'''
+getdate("201")
 
 def factorial(n):
     total = n
@@ -83,27 +83,95 @@ def factorial(n):
 number = int(input("Enter your number:"))
 print(factorial(number))
 
-#Write a Python function to check whether a number falls in a given range.
-def check_within_range(a):
-    if a in range(0,10):
-        return print("Your number is within range")
-    else:
-        return print("Mumuuuuu")
-    
 
-number_1 = int(input("Enter your number:"))
-print(check_within_range(number_1))
-
-#Calculate the number of upper / lower case letters in a string
 def alpha_counter(a):
     upper = 0
     lower = 0
     for i in a:
-        if a.isupper():
+        if i.isupper():
             upper +=1
-        elif a.islower():
+        elif i.islower():
             lower += 1
-        return upper,lower
+        else:
+            pass
+        
 
-print(alpha_counter('The quick Brown Fox'))
+print(alpha_counter('The quick Brown Fox'))'''
+
+def unique_list(a):
+    x = []
+    for i in a:
+        if i not in x:
+            x.append(i)
+    return x
+
+print(unique_list([1,2,3,3,3,3,4,5]))
+#check a prime number
+def prime_checker(a):
+    if (a%2 != 0):
+        if(a%3 != 0):
+            if(a%5 != 0):
+                return print("This is a prime nuber")
+            elif(a==5):
+                return print("This is a prime number")
+            else:
+                return print("This is a prime number")
+        elif(a==3):
+            return print("This is a prime number")
+        else:
+            return print("This is not a prime number")
+
+    elif(a==2):
+        return print("This is a prime number")
+    else:
+        return print("This is not a prime number")
+
+num = input("Enter your number:")
+print(prime_checker(int(num)))
+
+#check an even number
+def even_checker(a):
+    x = []
+    for e in a:
+        if(e%2 == 0):
+            x.append(e)
+        else:
+            pass
+    return x
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(even_checker(list))
+
+#check a perfect number
+def perfect_number(x):
+    sum = 0
+    for i in range(1,x):
+        if x%i == 0:
+            sum += i
+    if sum == x:
+        return print("This is a perfect number")
+
+
+num2 = input("Enter your number:")
+print(perfect_number(int(num2)))
+
+#palindrome code
+def palindrome(a):
+    x = [] 
+    n = len(a) - 1
+    i = 0
+    while i < n:
+        x.append(a[n-i])
+        i +=1
+    return print("Your Palindrome is:",x)
+
+string = input("Enter your string:")
+print(palindrome(string))
+
+
+
+
+
+
+
+
 
